@@ -1,55 +1,34 @@
-body {
+#grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 120px;
-    gap: 10px;
+    grid-template-rows: repeat(5, 124px);  
+    grid-gap: 10px;                          
     padding: 10px;
 }
 
-body > div {
+#grid > div {
     background: green;
     color: white;
-    font-size: 30px;
     padding: 20px;
+    font-size: 24px;
 }
 
-/* 1 — full width */
-body > div:nth-child(1) {
-    grid-column: 1 / 5;   
+#grid > div:nth-child(1) {
+    grid-column: span 4 / auto;
 }
 
-body > div:nth-child(2) {
-    grid-row: 2 / span 4; 
+#grid > div:nth-child(2) {
+    grid-row: span 4 / auto;
 }
 
-body > div:nth-child(3) {
-    grid-column: 2 / 3;
+#grid > div:nth-child(4) {
+    grid-column: span 2 / auto;
 }
 
-body > div:nth-child(4) {
-    grid-column: 3 / 5; 
+#grid > div:nth-child(5) {
+    grid-column: span 2 / auto;
 }
 
-body > div:nth-child(5) {
-    grid-column: 2 / 4;  
-}
-
-body > div:nth-child(6) {
-    grid-column: 4 / 5;  
-}
-
-body > div:nth-child(7) {
-    grid-column: 2 / 3;
-}
-
-body > div:nth-child(8) {
-    grid-column: 3 / 4;
-}
-
-body > div:nth-child(9) {
-    grid-column: 4 / 5;
-}
-
-body > div:nth-child(10) {
-    grid-column: 2 / 5; 
+#grid > div:nth-child(10) {
+    grid-column: span 3 / auto;
 }
