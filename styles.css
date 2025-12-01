@@ -1,36 +1,55 @@
-#grid {
+body {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 120px;
+    gap: 10px;
     padding: 10px;
-
-    grid-template-areas:
-        "i1  i1  i1  i1"
-
-        "i2  i3  i3  i4"
-
-        "i2  i5  i5  i6"
-
-        "i2  i7  i8  i9"
-
-        "i2  i10 i10 i10";
 }
 
-#grid div {
+body > div {
     background: green;
     color: white;
-    font-size: 24px;
-    padding: 15px;
+    font-size: 30px;
+    padding: 20px;
 }
 
-/* Assign areas */
-.i1  { grid-area: i1; }
-.i2  { grid-area: i2; }
-.i3  { grid-area: i3; }
-.i4  { grid-area: i4; }
-.i5  { grid-area: i5; }
-.i6  { grid-area: i6; }
-.i7  { grid-area: i7; }
-.i8  { grid-area: i8; }
-.i9  { grid-area: i9; }
-.i10 { grid-area: i10; }
+/* 1 — full width */
+body > div:nth-child(1) {
+    grid-column: 1 / 5;   
+}
+
+body > div:nth-child(2) {
+    grid-row: 2 / span 4; 
+}
+
+body > div:nth-child(3) {
+    grid-column: 2 / 3;
+}
+
+body > div:nth-child(4) {
+    grid-column: 3 / 5; 
+}
+
+body > div:nth-child(5) {
+    grid-column: 2 / 4;  
+}
+
+body > div:nth-child(6) {
+    grid-column: 4 / 5;  
+}
+
+body > div:nth-child(7) {
+    grid-column: 2 / 3;
+}
+
+body > div:nth-child(8) {
+    grid-column: 3 / 4;
+}
+
+body > div:nth-child(9) {
+    grid-column: 4 / 5;
+}
+
+body > div:nth-child(10) {
+    grid-column: 2 / 5; 
+}
